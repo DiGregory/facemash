@@ -1,0 +1,52 @@
+{{define "girls"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Girls</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <link href="/facemash/tmp/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 class="text-center">PHYSMASH</h1>
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-1 mt-5">
+            <ul class="nav flex-column nav-pills" id="myTab" role="tablist" aria-orientation="vertical">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                       aria-controls="home" aria-selected="true">Голосование</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                       aria-controls="profile" aria-selected="false">Рейтинг</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="col-md-10 ml-5">
+            <div class="tab-content">
+                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                {{template "VotingPage" .}}
+                </div>
+                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                {{template "RatingPage" .}}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>
+{{end}}

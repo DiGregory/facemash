@@ -1,0 +1,47 @@
+{{define "RatingPage"}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Имя</th>
+        <th scope="col">Фамилия</th>
+        <th scope="col">Побед/Поражений</th>
+        <th scope="col">Ссылка</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{range $i,$v:=.TopGirls}}
+    <tr>
+        <th scope="row">{{$i}}</th>
+        <td>{{.FirstName}}</td>
+        <td>{{.LastName}}</td>
+        <td>{{.Wins}}/{{.Losses}}</td>
+        <td><a href="http://vk.com/id{{.VkId}}" target="_blank">Вконтакте</a></td>
+    </tr>
+    {{end}}
+    </tbody>
+</table>
+{{end}}
+
+
+
+<tr>
+    <th scope="row">1</th>
+    <td>Mark</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+</tr>
+<tr>
+    <th scope="row">2</th>
+    <td>Jacob</td>
+    <td>Thornton</td>
+    <td>@fat</td>
+</tr>
+<tr>
+    <th scope="row">3</th>
+    <td>Larry</td>
+    <td>the Bird</td>
+    <td>@twitter</td>
+</tr>
+</tbody>
+</table>

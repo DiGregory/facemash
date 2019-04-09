@@ -1,0 +1,38 @@
+{{define "VotingPage"}}
+<div class="row">
+    <div class="col">
+        <div class="card" style="width: 20rem;">
+            <img src="/tmp/{{.FirstGirl.VkId}}.jpg" class="card-img-top" alt="..." style="max-height:400px;">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://vk.com/id{{.FirstGirl.VkId}}"
+                                          target="_blank">{{.FirstGirl.FirstName}} {{.FirstGirl.LastName}}</a></h5>
+
+                <form action="vote/{{.FirstGirl.VkId}}_{{.SecondGirl.VkId}}" method="POST"
+                      style="display: inline-block">
+                    <div class="submit-button">
+                        <button type="submit" class="btn btn-success">Голосовать</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card" style="width: 20rem;">
+            <img src="/tmp/{{.SecondGirl.VkId}}.jpg" class="card-img-top" alt="..." style="max-height:400px;">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://vk.com/id{{.SecondGirl.VkId}}"
+                                          target="_blank">{{.SecondGirl.FirstName}} {{.SecondGirl.LastName}}</a></h5>
+
+                <form action="vote/{{.SecondGirl.VkId}}_{{.FirstGirl.VkId}}" method="POST"
+                      style="display: inline-block">
+                    <div class="submit-button">
+                        <button type="submit" class="btn btn-success">Голосовать</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{end}}
