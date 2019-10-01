@@ -2,7 +2,7 @@ package parser
 
 import (
 	"fmt"
-	"github.com/himidori/golang-vk-api"
+	"github.com/DiGregory/golang-vk-api"
 	"strconv"
 	"time"
 	"os"

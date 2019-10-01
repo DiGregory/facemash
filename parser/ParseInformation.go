@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"github.com/himidori/golang-vk-api"
+	"github.com/DiGregory/golang-vk-api"
 	"fmt"
 	"os"
 	"strconv"

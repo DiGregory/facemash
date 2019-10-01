@@ -2,7 +2,7 @@ package parser
 
 import (
 	"fmt"
-	"github.com/himidori/golang-vk-api"
+	"github.com/DiGregory/golang-vk-api"
 	"strconv"
 	"os"
 	"bufio"
@@ -10,16 +10,6 @@ import (
 	"strings"
 )
 
-var publics = map[string]int{
-	"тс":      55059952,
-	"ачс":     60289186,
-	"ввх":     132177380,
-	"профком": 24234717,
-	"дф":      16710735,
-	"студком": 43890091,
-	"фф":      1149,
-}
-var peopleCount = 999
 
 func getFriends(GirlId int, client *vkapi.VKClient, file1 *os.File, file2 *os.File) {
 

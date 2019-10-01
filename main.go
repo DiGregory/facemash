@@ -4,8 +4,8 @@ import (
 	_ "github.com/lib/pq"
 
 	"log"
-	"./storage"
-	"./server"
+	"github.com/DiGregory/facemash/storage"
+	"github.com/DiGregory/facemash/server"
 )
 
 //var dbSource = os.Getenv("DATABASE_URL")

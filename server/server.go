@@ -1,7 +1,7 @@
 package server
 
 import (
-	"../storage"
+	"github.com/DiGregory/facemash/storage"
 	"net/http"
 	"fmt"
 )
